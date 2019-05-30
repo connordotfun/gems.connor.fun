@@ -5,21 +5,30 @@
             <script type="text/javascript" src="dist/js/tabulator.min.js"></script>
             <script type="text/javascript" src="data.js"></script> <!--Store data in a different js file so it doesn't wreck this one because storing it as a json file sounded hard :(-->
     </head>
+    <style>
+        .tabulator-table{
+            font-size: 20pt;
+        }
+    </style>
 <body>
+
 
 <div id="gems-table"></div>
 <script type="text/javascript">
     
     //create Tabulator on DOM element with id "gems-table"
     var table = new Tabulator("#gems-table", {
-        height:205, // set height of table (in CSS or here), this enables the Virtual DOM and improves render speed dramatically (can be any valid css height value)
+        height:700, // set height of table (in CSS or here), this enables the Virtual DOM and improves render speed dramatically (can be any valid css height value)
         data:tabledata, //assign data to table
         layout:"fitColumns", //fit columns to width of table (optional)
         columns:[ //Define Table Columns
-            {title:"Name", field:"name", width:150},
-            {title:"Carat", field:"carat"},
-            {title:"Color", field:"col"},
-            {title:"Price", field:"price"}
+            {type:"Type", field:"type", width:400},
+            {title:"Carats", field:"carats", width:100},
+            {title:"Color", field:"color", width:200},
+            {title:"Price", field:"price", width:100},
+            {type:"Size", field:"size", width:400},
+            {type:"Shape", field:"shape", width: 300},
+            {origin:"Origin", field:"origin", width:300}
         ]
         // rowClick:function(e, row){ //trigger an alert message when the row is clicked
         //     alert("Row " + row.getData().id + " Clicked!!!!");
