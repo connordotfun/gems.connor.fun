@@ -22,13 +22,13 @@
         data:tabledata, //assign data to table
         layout:"fitColumns", //fit columns to width of table (optional)
         columns:[ //Define Table Columns
-            {type:"Type", field:"type", width:400},
+            {title:"Type", field:"type", width:400},
             {title:"Carats", field:"carats", width:100},
             {title:"Color", field:"color", width:200},
             {title:"Price", field:"price", width:100},
-            {type:"Size", field:"size", width:400},
-            {type:"Shape", field:"shape", width: 300},
-            {origin:"Origin", field:"origin", width:300}
+            {title:"Size", field:"size", width:400},
+            {title:"Shape", field:"shape", width: 300},
+            {title:"Origin", field:"origin", width:300}
         ]
         // rowClick:function(e, row){ //trigger an alert message when the row is clicked
         //     alert("Row " + row.getData().id + " Clicked!!!!");
